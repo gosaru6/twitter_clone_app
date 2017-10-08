@@ -1,0 +1,18 @@
+<div class="container">
+  <h3><%= notice %></>
+  <h2>いちらん</h2>
+  <h3><%= link_to 'つくる', new_board_path %></h3>
+  <div class="row">
+    <% @boards.each do |board| %>  
+      <div class="board_panel">
+        <div class="board_contents">
+          <p><%= link_to  board.content, board_path(board.id), class:"content" %></p>
+        </div>
+        <div class="board-links">
+          <%= link_to 'へんしゅう', edit_board_path(board.id), class: 'btn btn-info'  %> |
+          <%= link_to 'けす', board, method: :delete, data: { confirm: 'ほんとに?'}, class: 'btn btn-danger'  %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
