@@ -11,12 +11,15 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :ないよう %>
-  </div>
-  <div><%= form.text_area :content %>
-    <%= form.submit :ほぞん %>
+  <div class="form-area">
+    <div>
+      <%= form.label :ないよう %>
+    </div>
+    <div>
+      <%= form.text_area :content %>
+      <div><%= form.submit :ほぞん %><div>
+    </div>
+
+    <%= link_to "もどる", boards_path %>
   </div>
 <% end %>
-
-<%= link_to "もどる", boards_path %>
